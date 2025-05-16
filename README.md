@@ -103,7 +103,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- Your Name - [@yourusername](https://github.com/yourusername)
+- [@yaviral17](https://github.com/yaviral17)
 
 ## 🙏 Acknowledgments
 
@@ -113,9 +113,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Your Name - [@yourusername](https://twitter.com/yourusername)
-
-Project Link: [https://github.com/yourusername/trainer.ai](https://github.com/yourusername/trainer.ai)
+- [x.conm](https://x.com/sudo_yavi)
+- [topmate](https://topmate.io/yaviral17)
 
 ---
 
