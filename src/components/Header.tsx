@@ -3,6 +3,8 @@ import React from 'react';
 import { Sun, Moon } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
 import DownloadModal from './DownloadModal';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface HeaderProps {
   activeTab: string;
@@ -14,63 +16,43 @@ export default function Header({
   onTabChange,
 }: HeaderProps) {
   const { darkMode, toggleDarkMode, setShowModal } = useTheme();
+  const pathname = usePathname();
 
   return (
     <>
-      <header className={`flex justify-between items-center px-6 py-4 sticky top-0 z-50 transition-colors duration-300 ${darkMode ? 'bg-gray-800' : 'bg-white'}`}>
-        <div className="flex items-center space-x-2">
-          {/* cusrom bg color FE5126 */}
-          <div className="bg-[#FE5126] text-white p-2 rounded-full">
-            {/* <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 16a4 4 0 100-8 4 4 0 000 8z" fill="currentColor" />
-              <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" stroke="currentColor" strokeWidth="2" />
-            </svg> */}
-            <img src="images/logo_icon.png" alt="logo" className="w-6 h-6" />
-          </div>
-          <span className={`font-bold text-xl ${darkMode? "text-white":"text-black"}`}>trainer.ai</span>
-        </div>
+      <header className={`flex justify-between items-center px-6 py-4 sticky top-0 z-50 transition-colors duration-300  ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
+     <a href="/">
+      <div className="flex items-center gap-3">
+              <img src="/images/logo_icon.png" alt="Trainer.ai Logo" className="w-10 h-10 rounded-lg" />
+              <span className={`text-2xl font-bold tracking-tight ${darkMode? "text-white/90":"text-gray-700"} `}>trainer.ai</span>
+            </div>
+            </a>
         
         <nav className="hidden md:flex space-x-8">
-          <a 
-            href="#" 
-            className={`font-medium ${activeTab === 'home' ? 'text-[#FE5126]' : darkMode ? 'text-gray-300' : 'text-gray-700'} transition-colors duration-200 hover:text-[#FE5126]`}
-            onClick={(e) => {
-              e.preventDefault();
-              onTabChange('home');
-            }}
+          {/* <Link 
+            href="/"
+            className={`font-medium ${pathname === '/' ? 'text-[#FE5126]' : darkMode ? 'text-gray-300' : 'text-gray-700'} transition-colors duration-200 hover:text-[#FE5126]`}
           >
             Home
-          </a>
-          <a 
-            href="#" 
-            className={`font-medium ${activeTab === 'about' ? 'text-[#FE5126]' : darkMode ? 'text-gray-300' : 'text-gray-700'} transition-colors duration-200 hover:text-[#FE5126]`}
-            onClick={(e) => {
-              e.preventDefault();
-              onTabChange('about');
-            }}
+          </Link>
+          <Link 
+            href="/about"
+            className={`font-medium ${pathname === '/about' ? 'text-[#FE5126]' : darkMode ? 'text-gray-300' : 'text-gray-700'} transition-colors duration-200 hover:text-[#FE5126]`}
           >
             About Us
-          </a>
-          <a 
-            href="#" 
-            className={`font-medium ${activeTab === 'pricing' ? 'text-[#FE5126]' : darkMode ? 'text-gray-300' : 'text-gray-700'} transition-colors duration-200 hover:text-[#FE5126]`}
-            onClick={(e) => {
-              e.preventDefault();
-              onTabChange('pricing');
-            }}
+          </Link>
+          <Link 
+            href="/pricing"
+            className={`font-medium ${pathname === '/pricing' ? 'text-[#FE5126]' : darkMode ? 'text-gray-300' : 'text-gray-700'} transition-colors duration-200 hover:text-[#FE5126]`}
           >
             Pricing
-          </a>
-          <a 
-            href="#" 
-            className={`font-medium ${activeTab === 'features' ? 'text-[#FE5126]' : darkMode ? 'text-gray-300' : 'text-gray-700'} transition-colors duration-200 hover:text-[#FE5126]`}
-            onClick={(e) => {
-              e.preventDefault();
-              onTabChange('features');
-            }}
+          </Link>
+          <Link 
+            href="/features"
+            className={`font-medium ${pathname === '/features' ? 'text-[#FE5126]' : darkMode ? 'text-gray-300' : 'text-gray-700'} transition-colors duration-200 hover:text-[#FE5126]`}
           >
             Features
-          </a>
+          </Link> */}
         </nav>
         
         <div className="flex items-center space-x-4">
@@ -81,13 +63,14 @@ export default function Header({
           >
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-          
-          <button 
-            className={`bg-[#FE5126] text-white px-6 py-2 rounded-md font-medium hover:bg-gray-800 transition-colors duration-200 transform hover:scale-105 active:scale-95 border-[2px] border-[#FE5126] ${darkMode ? 'border-white-700' : 'border-gray-200'}`}
-            onClick={() => setShowModal(true)}
-          >
-            Download
-          </button>
+          {pathname !== '/download' && (
+            <Link 
+              href="/download"
+              className={`bg-[#FE5126] text-white px-6 py-2 rounded-md font-medium transition-colors duration-200 transform hover:scale-105 active:scale-95 border-[2px] border-[#FE5126] ${darkMode ? 'border-white-700' : 'border-gray-200'}`}
+            >
+              Download
+            </Link>
+          )}
         </div>
       </header>
       <DownloadModal />

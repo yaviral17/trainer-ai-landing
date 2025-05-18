@@ -14,10 +14,10 @@ export default function DownloadModal() {
         style={{ animation: 'fadeIn 0.3s, scaleIn 0.3s' }}
       >
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-xl font-bold text-white">Download Uiftry</h3>
+          <h3 className={`text-xl font-bold ${darkMode? "text-white":"text-gray-700"}`}>Download Uiftry</h3>
           <button 
             onClick={() => setShowModal(false)}
-            className="px-[20px] py-[10px] rounded-full text-white hover:bg-gray-600 dark:hover:bg-gray-700"
+            className={`px-[20px] py-[10px] rounded-full ${darkMode? "text-white":"text-gray-700"} ${darkMode? "hover:bg-gray-600":"hover:bg-gray-200"} dark:hover:bg-gray-700`}
           >
             ✕
           </button>
@@ -29,7 +29,7 @@ export default function DownloadModal() {
         
         <div className="grid grid-cols-2 gap-4 mb-6">
           <button 
-            className={`flex items-center text-white justify-center py-3 px-4 rounded-lg border ${darkMode ? 'border-gray-600 hover:bg-gray-700' : 'border-gray-200 hover:bg-gray-50'} font-medium transition-colors duration-200`}
+            className={`flex items-center ${darkMode? "text-white":"text-gray-700"} justify-center py-3 px-4 rounded-lg border ${darkMode ? 'border-gray-600 hover:bg-gray-700' : 'border-gray-200 hover:bg-gray-50'} font-medium transition-colors duration-200`}
           >
             <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24c-2.86-1.21-6.08-1.21-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48C3.3 11.25 1.28 14.44 1 18h22c-.28-3.56-2.3-6.75-5.4-8.52zM7 15.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm10 0c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z" />
@@ -37,7 +37,7 @@ export default function DownloadModal() {
             Android
           </button>
           <button 
-            className={`flex items-center text-white justify-center py-3 px-4 rounded-lg border ${darkMode ? 'border-red-600' : 'border-red-200 '} ${darkMode? 'bg-red-900/50' : 'bg-red-50'} font-medium transition-colors duration-200`}
+            className={`flex items-center  ${darkMode? "text-white":"text-gray-700"}justify-center py-3 px-4 rounded-lg border ${darkMode ? 'border-red-600' : 'border-red-200 '} ${darkMode? 'bg-red-900/50' : 'bg-red-50'} font-medium transition-colors duration-200`}
           >
             <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
               <path d="M22 17.607c-.786 2.28-3.139 6.317-5.563 6.361-1.608.031-2.125-.953-3.963-.953-1.837 0-2.412.923-3.932.983-2.572.099-6.542-5.827-6.542-10.995 0-4.747 3.308-7.1 6.198-7.143 1.55-.028 3.014 1.045 3.959 1.045.949 0 2.727-1.29 4.596-1.101.782.033 2.979.315 4.389 2.377-3.741 2.442-3.158 7.549.858 9.426zm-5.222-17.607c-2.826.114-5.132 3.079-4.81 5.531 2.612.203 5.118-2.725 4.81-5.531z" />
