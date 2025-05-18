@@ -10,7 +10,7 @@ export default function AboutPage() {
     <div className={`min-h-screen font-sans transition-colors duration-300 ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
       <section className="px-6 py-12 md:py-24 max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-black mb-4">About Trainer.ai</h1>
+          <h1 className="text-4xl md:text-6xl font-black mb-4">About TrainerAI</h1>
           <p className={`text-xl ${darkMode ? 'text-gray-300' : 'text-gray-600'} max-w-2xl mx-auto`}>
             Revolutionizing personal fitness with AI-powered training solutions
           </p>
@@ -20,7 +20,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} mb-4`}>
-              At Trainer.ai, we&apos;re on a mission to make personalized fitness training accessible to everyone. 
+              At TrainerAI, we&apos;re on a mission to make personalized fitness training accessible to everyone. 
               We believe that everyone deserves access to professional-level training guidance, regardless of 
               their location or budget.
             </p>

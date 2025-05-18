@@ -50,7 +50,7 @@ const features = [
   {
     id: "personalized",
     title: "Personalized Workouts",
-    description: "Get routines tailored to your goals, fitness level, and progress. Trainer.ai adapts as you grow, so you always get the most effective plan.",
+    description: "Get routines tailored to your goals, fitness level, and progress. TrainerAI adapts as you grow, so you always get the most effective plan.",
     icon: <IconActivity className="w-8 h-8 text-orange-500" />,
   },
   {
@@ -62,7 +62,7 @@ const features = [
   {
     id: "experience",
     title: "Seamless Experience",
-    description: "Enjoy a beautiful, fast, and intuitive app on any device. Trainer.ai is designed for a delightful experience, day or night.",
+    description: "Enjoy a beautiful, fast, and intuitive app on any device. TrainerAI is designed for a delightful experience, day or night.",
     icon: <IconShield className="w-8 h-8 text-orange-500" />,
   },
 ];
@@ -158,7 +158,7 @@ export default function DownloadPage() {
           >
             <Image
               src="/images/logo_icon.png"
-              alt="Trainer.ai Logo"
+              alt="TrainerAI Logo"
               width={80}
               height={80}
               className="mx-auto rounded-xl shadow-md"
@@ -171,7 +171,7 @@ export default function DownloadPage() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="mt-6 text-4xl font-bold tracking-tight text-orange-500 sm:text-5xl"
           >
-            Download Trainer.ai
+            Download TrainerAI
           </motion.h1>
           
           <motion.p
@@ -199,24 +199,24 @@ export default function DownloadPage() {
                 <div className="flex-shrink-0">
                   <Image
                     src="/images/logo_icon.png"
-                    alt="Trainer.ai"
+                    alt="TrainerAI"
                     width={64}
                     height={64}
                     className="rounded-xl"
                   />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold">Trainer.ai</h2>
+                  <h2 className="text-2xl font-bold">TrainerAI</h2>
                   <p className="text-gray-600 dark:text-gray-400">Your AI-Powered Fitness Companion</p>
                 </div>
               </div>
               
               <p className="mb-6 text-gray-700 dark:text-gray-300">
-                Experience the future of fitness with Trainer.ai – 
+                Experience the future of fitness with TrainerAI – 
                 the smart, adaptive app that helps you crush your
                 goals with personalized workouts, real-time
                 feedback, and a beautiful, modern interface.
-                Whether you're a beginner or a pro, Trainer.ai is
+                Whether you&apos;re a beginner or a pro, TrainerAI is
                 your partner for a healthier, stronger you.
               </p>
               
@@ -231,7 +231,7 @@ export default function DownloadPage() {
               </motion.button>
               
               <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-                Trainer.ai is safe, verified, and trusted by fitness
+                TrainerAI is safe, verified, and trusted by fitness
                 enthusiasts. Not on the Play Store yet? No worries—just
                 allow installation from unknown sources and get started!
               </p>
@@ -325,7 +325,7 @@ export default function DownloadPage() {
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 md:p-8">
           <h2 className="text-2xl font-bold mb-6">Security & Trust</h2>
           <p className="mb-4 text-gray-700 dark:text-gray-300">
-            Trainer.ai is built with the latest technology and your privacy in mind. Our APK is scanned, verified, and ready for you
+            TrainerAI is built with the latest technology and your privacy in mind. Our APK is scanned, verified, and ready for you
             to install with confidence.
           </p>
           <div className="flex items-center space-x-4">
@@ -371,12 +371,12 @@ export default function DownloadPage() {
               <div className="flex items-center">
                 <Image 
                   src="/logo.png" 
-                  alt="Trainer.ai Logo" 
+                  alt="TrainerAI Logo" 
                   width={40} 
                   height={40}
                   className="rounded-lg"
                 />
-                <span className="ml-2 text-xl font-bold">trainer.ai</span>
+                <span className="ml-2 text-xl font-bold">TrainerAI</span>
               </div>
               <p className="mt-2 text-gray-600 dark:text-gray-400">
                 Your AI-powered fitness companion.

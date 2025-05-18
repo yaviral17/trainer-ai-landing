@@ -47,7 +47,7 @@ export default function UiftryLandingPage() {
               with <span className="text-orange-500">AI-Powered Fitness</span>
             </h1>
             <p className={`mb-8 max-w-lg mx-auto text-left ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              Meet <span className="font-bold text-orange-500">Trainer.ai</span> – your smart, adaptive fitness companion. <br />
+              Meet <span className="font-bold text-orange-500">TrainerAI</span> – your smart, adaptive fitness companion. <br />
               Get <span className="font-semibold">personalized workouts</span>, <span className="font-semibold">real-time feedback</span>, and a stunning, modern experience on any device. <span role="img" aria-label="muscle">💪</span>
             </p>
             <div className="flex flex-wrap gap-4">
@@ -135,7 +135,7 @@ export default function UiftryLandingPage() {
           >
             <span className="flex items-center">
               <Star className="mr-2" size={14} />
-              <span>Download Trainer.ai </span>
+              <span>Download TrainerAI </span>
             </span>
             <span className="text-xs text-white/80">It&apos;s Free</span>
           </div>
@@ -159,13 +159,13 @@ export default function UiftryLandingPage() {
 
           <div>
             <p className="text-orange-500 font-medium mb-2">FEATURES <span role="img" aria-label="sparkles">✨</span></p>
-            <h2 className="text-4xl font-black mb-8">Why <span className="text-orange-500">Trainer.ai</span>? <span role="img" aria-label="thinking">🤔</span></h2>
+            <h2 className="text-4xl font-black mb-8">Why <span className="text-orange-500">TrainerAI</span>? <span role="img" aria-label="thinking">🤔</span></h2>
 
             <div className="space-y-8">
               <FeatureItem
                 icon={<Star className="text-orange-500" />}
                 title="Personalized Workouts"
-                description="Get routines tailored to your goals, fitness level, and progress. Trainer.ai adapts as you grow, so you always get the most effective plan."
+                description="Get routines tailored to your goals, fitness level, and progress. TrainerAI adapts as you grow, so you always get the most effective plan."
                 darkMode={darkMode}
                 isHovered={hoveredFeature === 'workouts'}
                 onHover={() => setHoveredFeature('workouts')}
@@ -183,7 +183,7 @@ export default function UiftryLandingPage() {
               <FeatureItem
                 icon={<Star className="text-orange-500" />}
                 title="Seamless Experience"
-                description="Enjoy a beautiful, fast, and intuitive app on any device. Trainer.ai is designed for a delightful experience, day or night."
+                description="Enjoy a beautiful, fast, and intuitive app on any device. TrainerAI is designed for a delightful experience, day or night."
                 darkMode={darkMode}
                 isHovered={hoveredFeature === 'seamless'}
                 onHover={() => setHoveredFeature('seamless')}
@@ -199,13 +199,13 @@ export default function UiftryLandingPage() {
           <div>
             <p className="text-orange-500 font-medium mb-2">ADVANTAGES <span role="img" aria-label="trophy">🏆</span></p>
             <h2 className="text-4xl font-black mb-8">
-              🚀 What Sets <span className="text-orange-500">Trainer.ai</span> Apart?
+              🚀 What Sets <span className="text-orange-500">TrainerAI</span> Apart?
             </h2>
             <div className="space-y-8">
               <FeatureItem
                 icon={<Star className="text-orange-500" />}
                 title="Always Adapting to You"
-                description="Trainer.ai uses advanced AI to keep your workouts fresh, challenging, and perfectly matched to your progress."
+                description="TrainerAI uses advanced AI to keep your workouts fresh, challenging, and perfectly matched to your progress."
                 darkMode={darkMode}
                 isHovered={hoveredFeature === 'adapting'}
                 onHover={() => setHoveredFeature('adapting')}
@@ -214,7 +214,7 @@ export default function UiftryLandingPage() {
               <FeatureItem
                 icon={<Star className="text-orange-500" />}
                 title="Built for Every Device"
-                description="Enjoy a seamless experience on mobile, tablet, or desktop. Trainer.ai is fully responsive and looks stunning everywhere."
+                description="Enjoy a seamless experience on mobile, tablet, or desktop. TrainerAI is fully responsive and looks stunning everywhere."
                 darkMode={darkMode}
                 isHovered={hoveredFeature === 'devices'}
                 onHover={() => setHoveredFeature('devices')}
@@ -223,7 +223,7 @@ export default function UiftryLandingPage() {
               <FeatureItem
                 icon={<Star className="text-orange-500" />}
                 title="Trusted by Fitness Enthusiasts"
-                description="Join a growing community of users who trust Trainer.ai to help them reach their fitness goals."
+                description="Join a growing community of users who trust TrainerAI to help them reach their fitness goals."
                 darkMode={darkMode}
                 isHovered={hoveredFeature === 'trusted'}
                 onHover={() => setHoveredFeature('trusted')}
@@ -264,7 +264,7 @@ export default function UiftryLandingPage() {
           </h2>
           <h4 className="text-lg font-normal mb-4 text-gray-600 text-center">
             Real stories, real results! <span role="img" aria-label="muscle">💪</span> <span role="img" aria-label="fire">🔥</span> <br />
-            See how Trainer.ai is transforming fitness journeys around the world.
+            See how TrainerAI is transforming fitness journeys around the world.
           </h4>
 
         </div>
@@ -277,7 +277,7 @@ export default function UiftryLandingPage() {
               src: '/images/t1.png',
               name: 'Alex Martinez',
               designation: 'Fitness Enthusiast',
-              quote: 'Trainer.ai keeps me motivated and on track. The AI workouts are spot on!'
+              quote: 'TrainerAI keeps me motivated and on track. The AI workouts are spot on!'
             },
             {
               src: '/images/t2.png',
@@ -361,7 +361,7 @@ export default function UiftryLandingPage() {
 
 
 
-      <Footerdemo />
+      <Footerdemo  />
     </div>
   );
 }

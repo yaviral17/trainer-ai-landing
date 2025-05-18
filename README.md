@@ -1,8 +1,8 @@
-# 🏋️‍♂️ Trainer.ai - AI-Powered Fitness Landing Page
+# 🏋️‍♂️ TrainerAI - AI-Powered Fitness Landing Page
 
-![Trainer.ai Landing Page](public/images/preview.png)
+![TrainerAI Landing Page](public/images/preview.png)
 
-A modern, responsive landing page for Trainer.ai - your AI-powered personal fitness companion. Built with Next.js and Tailwind CSS, this landing page showcases the future of personalized fitness training.
+A modern, responsive landing page for TrainerAI - your AI-powered personal fitness companion. Built with Next.js and Tailwind CSS, this landing page showcases the future of personalized fitness training.
 
 ## ✨ Features
 
@@ -25,8 +25,8 @@ A modern, responsive landing page for Trainer.ai - your AI-powered personal fitn
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/trainer.ai.git
-cd trainer.ai
+git clone https://github.com/yourusername/TrainerAI.git
+cd TrainerAI
 ```
 
 2. Install dependencies:
@@ -72,7 +72,7 @@ The project uses Tailwind CSS for styling, making it easy to customize:
 ## 📦 Project Structure
 
 ```
-trainer.ai/
+TrainerAI/
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx

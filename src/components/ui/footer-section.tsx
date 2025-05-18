@@ -10,13 +10,15 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import {  Link, Moon,  Sun,  X } from "lucide-react"
+import {  Moon, Sun, X } from "lucide-react"
 import { useTheme } from "@/context/ThemeContext"
 import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 import Image from "next/image"
+import Link from "next/link"
 
 function Footerdemo() {
-  const { darkMode,toggleDarkMode } = useTheme();
+
+  const { darkMode, toggleDarkMode } = useTheme();
   // const [isChatOpen, setIsChatOpen] = React.useState(false)
 
   React.useEffect(() => {
@@ -27,32 +29,34 @@ function Footerdemo() {
     }
   }, [darkMode])
 
-  
+
 
   return (
-    <footer className={`w-[100%] relative border-t ${darkMode?"bg-black/24":"bg-gray-900/6"} text-foreground transition-colors duration-300`}>
+    <footer className={`w-[100%] relative border-t ${darkMode ? "bg-black/24" : "bg-gray-900/6"} text-foreground transition-colors duration-300`}>
       <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col items-start gap-4">
             <div className="flex items-center gap-3">
-              <Image src="/images/logo_icon.png" alt="Trainer.ai Logo" className="w-10 h-10 rounded-lg"  
-              width={40}
-              height={40}
-              
+              <Image src="/images/logo_icon.png" alt="TrainerAI Logo" className="w-10 h-10 rounded-lg"
+                width={40}
+                height={40}
+
               />
-              <span className={`text-2xl font-bold tracking-tight ${darkMode? "text-white/90":"text-gray-700"} `}>trainer.ai</span>
+              <span className={`text-2xl font-bold tracking-tight ${darkMode ? "text-white/90" : "text-gray-700"} `}>TrainerAI</span>
             </div>
             <p className="text-muted-foreground max-w-xs">
               Your AI-powered fitness companion.<br />
               <span className="text-orange-500 font-semibold">Smarter workouts. Real results. 🚀</span>
             </p>
           </div>
-       
+
           <div>
             <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
             <nav className="space-y-2 text-sm">
               <Link href="/" className="block transition-colors hover:text-primary">
-                Home
+                <div>
+                <p>Home</p>
+                </div>
               </Link>
               <a href="/download" className="block transition-colors hover:text-primary">
                 Dowloads
@@ -69,7 +73,7 @@ function Footerdemo() {
             </nav>
           </div>
 
-          
+
           <div>
             <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
             <address className="space-y-2 text-sm not-italic">
@@ -152,7 +156,7 @@ function Footerdemo() {
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
-             
+
             </div>
             <div className="flex items-center space-x-2">
               <Sun className="h-4 w-4" />

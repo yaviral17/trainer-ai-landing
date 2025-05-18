@@ -25,8 +25,8 @@ export default function Header({
       <header className={`flex justify-between items-center px-6 py-4 sticky top-0 z-50 transition-colors duration-300  ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
      <Link href="/" className="flex items-center">
       <div className="flex items-center gap-3">
-              <Image src="/images/logo_icon.png" alt="Trainer.ai Logo" width={32} height={32} className="w-10 h-10 rounded-lg" />
-              <span className={`text-2xl font-bold tracking-tight ${darkMode? "text-white/90":"text-gray-700"} `}>trainer.ai</span>
+              <Image src="/images/logo_icon.png" alt="TrainerAI Logo" width={32} height={32} className="w-10 h-10 rounded-lg" />
+              <span className={`text-2xl font-bold tracking-tight ${darkMode? "text-white/90":"text-gray-700"} `}>TrainerAI</span>
             </div>
             </Link>
         
