@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import { ThemeProvider } from '@/context/ThemeContext';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/next';
 
 export default function RootLayout({
   children,
@@ -16,6 +17,7 @@ export default function RootLayout({
           <Header activeTab="" onTabChange={() => {}} />
           {children}
         </ThemeProvider>
+         <Analytics />
       </body>
     </html>
   );
