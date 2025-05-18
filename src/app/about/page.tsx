@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import { useTheme } from '@/context/ThemeContext';
+import Image from 'next/image';
 
 export default function AboutPage() {
   const { darkMode } = useTheme();
@@ -19,7 +20,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} mb-4`}>
-              At Trainer.ai, we're on a mission to make personalized fitness training accessible to everyone. 
+              At Trainer.ai, we&apos;re on a mission to make personalized fitness training accessible to everyone. 
               We believe that everyone deserves access to professional-level training guidance, regardless of 
               their location or budget.
             </p>
@@ -29,10 +30,19 @@ export default function AboutPage() {
             </p>
           </div>
           <div className={`rounded-xl overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-white'} p-6 shadow-lg`}>
-            <img 
-              src="/images/t1.png" 
-              alt="Our Mission" 
+            {/* <Image
+              src="/images/t1.png"
+              alt="Our Mission"
+              width={600}
+              height={400}
               className="w-full h-auto rounded-lg"
+            /> */}
+            <Image
+              src="/images/t1.png"
+              alt="Our Mission"
+              width={600}
+              height={400}
+              className={`w-full h-auto rounded-lg ${darkMode ? 'filter grayscale' : ''}`}
             />
           </div>
         </div>
@@ -41,7 +51,7 @@ export default function AboutPage() {
           <div className={`p-6 rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
             <h3 className="text-xl font-bold mb-4">Innovation</h3>
             <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              We continuously push the boundaries of what's possible in fitness technology, 
+              We continuously push the boundaries of what&apos;s possible in fitness technology, 
               creating solutions that adapt to your unique needs.
             </p>
           </div>
@@ -55,7 +65,7 @@ export default function AboutPage() {
           <div className={`p-6 rounded-xl ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg`}>
             <h3 className="text-xl font-bold mb-4">Community</h3>
             <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              We're building a global community of fitness enthusiasts who support and 
+              We&apos;re building a global community of fitness enthusiasts who support and 
               motivate each other on their fitness journeys.
             </p>
           </div>
@@ -66,7 +76,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
-                <img 
+                <Image 
                   src="/images/t1.png" 
                   alt="Team Member" 
                   className="w-full h-full object-cover"
@@ -77,7 +87,7 @@ export default function AboutPage() {
             </div>
             <div className="text-center">
               <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
-                <img 
+                <Image 
                   src="/images/t2.png" 
                   alt="Team Member" 
                   className="w-full h-full object-cover"
@@ -88,7 +98,7 @@ export default function AboutPage() {
             </div>
             <div className="text-center">
               <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-4">
-                <img 
+                <Image 
                   src="/images/t3.png" 
                   alt="Team Member" 
                   className="w-full h-full object-cover"

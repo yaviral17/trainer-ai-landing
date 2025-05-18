@@ -2,23 +2,22 @@
 
 import * as React from "react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
-import { Textarea } from "@/components/ui/textarea"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Facebook, Instagram, Linkedin, Moon, Send, Sun, Twitter, X } from "lucide-react"
+import {  Link, Moon,  Sun,  X } from "lucide-react"
 import { useTheme } from "@/context/ThemeContext"
 import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
+import Image from "next/image"
 
 function Footerdemo() {
   const { darkMode,toggleDarkMode } = useTheme();
-  const [isChatOpen, setIsChatOpen] = React.useState(false)
+  // const [isChatOpen, setIsChatOpen] = React.useState(false)
 
   React.useEffect(() => {
     if (darkMode) {
@@ -36,7 +35,7 @@ function Footerdemo() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col items-start gap-4">
             <div className="flex items-center gap-3">
-              <img src="/images/logo_icon.png" alt="Trainer.ai Logo" className="w-10 h-10 rounded-lg" />
+              <Image src="/images/logo_icon.png" alt="Trainer.ai Logo" className="w-10 h-10 rounded-lg" />
               <span className={`text-2xl font-bold tracking-tight ${darkMode? "text-white/90":"text-gray-700"} `}>trainer.ai</span>
             </div>
             <p className="text-muted-foreground max-w-xs">
@@ -48,9 +47,9 @@ function Footerdemo() {
           <div>
             <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
             <nav className="space-y-2 text-sm">
-              <a href="/" className="block transition-colors hover:text-primary">
+              <Link href="/" className="block transition-colors hover:text-primary">
                 Home
-              </a>
+              </Link>
               <a href="/download" className="block transition-colors hover:text-primary">
                 Dowloads
               </a>

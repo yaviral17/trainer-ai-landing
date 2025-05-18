@@ -5,6 +5,7 @@ import { useTheme } from '@/context/ThemeContext';
 import DownloadModal from './DownloadModal';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 interface HeaderProps {
   activeTab: string;
@@ -12,21 +13,22 @@ interface HeaderProps {
 }
 
 export default function Header({ 
-  activeTab, 
-  onTabChange,
+  // activeTab, 
+  // onTabChange,
 }: HeaderProps) {
-  const { darkMode, toggleDarkMode, setShowModal } = useTheme();
+  // const { darkMode, toggleDarkMode, setShowModal } = useTheme();
+  const { darkMode, toggleDarkMode } = useTheme();
   const pathname = usePathname();
 
   return (
     <>
       <header className={`flex justify-between items-center px-6 py-4 sticky top-0 z-50 transition-colors duration-300  ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
-     <a href="/">
+     <Link href="/" className="flex items-center">
       <div className="flex items-center gap-3">
-              <img src="/images/logo_icon.png" alt="Trainer.ai Logo" className="w-10 h-10 rounded-lg" />
+              <Image src="/images/logo_icon.png" alt="Trainer.ai Logo" width={32} height={32} className="w-10 h-10 rounded-lg" />
               <span className={`text-2xl font-bold tracking-tight ${darkMode? "text-white/90":"text-gray-700"} `}>trainer.ai</span>
             </div>
-            </a>
+            </Link>
         
         <nav className="hidden md:flex space-x-8">
           {/* <Link 

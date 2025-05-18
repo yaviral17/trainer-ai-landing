@@ -4,7 +4,7 @@ import { ChevronRight, Play, Star, Home, PieChart, Settings, CreditCard } from '
 import { useTheme } from '@/context/ThemeContext';
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
 import { Footerdemo } from '@/components/ui/footer-section';
-import { Accordion, AccordionContent } from '@radix-ui/react-accordion';
+import Image from 'next/image';
 
 export default function UiftryLandingPage() {
   const { darkMode } = useTheme();
@@ -23,10 +23,6 @@ export default function UiftryLandingPage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle download button click
-  const handleDownload = () => {
-    setShowModal(true);
-  };
 
 
   // Close modal
@@ -81,13 +77,13 @@ export default function UiftryLandingPage() {
             <div className="relative z-10 flex justify-center">
               {/* Phone mockups */}
               <div className="relative -mr-16 transform rotate-6 transition-transform duration-500 hover:rotate-12 hover:-translate-y-2">
-                <PhoneMockupImage darkMode={darkMode} screen='p1' width={180} height={200} />
+                <PhoneMockupImage  screen='p1' width={180} height={200} />
               </div>
               <div className="relative z-20 transition-transform duration-500 hover:-translate-y-4">
-                <PhoneMockupImage primary darkMode={darkMode} screen='p2' width={180} height={200} />
+                <PhoneMockupImage  screen='p2' width={180} height={200} />
               </div>
               <div className="relative -ml-16 transform -rotate-6 transition-transform duration-500 hover:-rotate-12 hover:-translate-y-2">
-                <PhoneMockupImage darkMode={darkMode} screen='p3' width={180} height={200} />
+                <PhoneMockupImage  screen='p3' width={180} height={200} />
               </div>
             </div>
 
@@ -141,7 +137,7 @@ export default function UiftryLandingPage() {
               <Star className="mr-2" size={14} />
               <span>Download Trainer.ai </span>
             </span>
-            <span className="text-xs text-white/80">It's Free</span>
+            <span className="text-xs text-white/80">It&apos;s Free</span>
           </div>
         </div>
       </section>
@@ -162,8 +158,8 @@ export default function UiftryLandingPage() {
           </div>
 
           <div>
-          <p className="text-orange-500 font-medium mb-2">FEATURES <span role="img" aria-label="sparkles">✨</span></p>
-          <h2 className="text-4xl font-black mb-8">Why <span className="text-orange-500">Trainer.ai</span>? <span role="img" aria-label="thinking">🤔</span></h2>
+            <p className="text-orange-500 font-medium mb-2">FEATURES <span role="img" aria-label="sparkles">✨</span></p>
+            <h2 className="text-4xl font-black mb-8">Why <span className="text-orange-500">Trainer.ai</span>? <span role="img" aria-label="thinking">🤔</span></h2>
 
             <div className="space-y-8">
               <FeatureItem
@@ -201,10 +197,10 @@ export default function UiftryLandingPage() {
       <section className="px-6 py-12 md:py-24 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
-          <p className="text-orange-500 font-medium mb-2">ADVANTAGES <span role="img" aria-label="trophy">🏆</span></p>
-<h2 className="text-4xl font-black mb-8">
-  🚀 What Sets <span className="text-orange-500">Trainer.ai</span> Apart?
-</h2>
+            <p className="text-orange-500 font-medium mb-2">ADVANTAGES <span role="img" aria-label="trophy">🏆</span></p>
+            <h2 className="text-4xl font-black mb-8">
+              🚀 What Sets <span className="text-orange-500">Trainer.ai</span> Apart?
+            </h2>
             <div className="space-y-8">
               <FeatureItem
                 icon={<Star className="text-orange-500" />}
@@ -256,22 +252,22 @@ export default function UiftryLandingPage() {
       {/* Testimonial seciton */}
       <section className="px-6 py-12 md:py-24 max-w-6xl mx-auto">
         {/* <div className="grid md:grid-cols-2 gap-8 items-center"> */}
-        <div className={`text-center mb-8 bg-black/10 p-4 rounded-lg ${darkMode? "bg-gray-800" : "bg-gray-600/20 "} `}>
-        <p className="text-orange-500 font-medium mb-2 text-center flex items-center justify-center gap-2">
-          
-  TESTIMONIALS <span role="img" aria-label="sparkles">✨</span>
-</p>
+        <div className={`text-center mb-8 bg-black/10 p-4 rounded-lg ${darkMode ? "bg-gray-800" : "bg-gray-600/20 "} `}>
+          <p className="text-orange-500 font-medium mb-2 text-center flex items-center justify-center gap-2">
 
-  
-<h2 className="text-4xl font-black mb-4 text-center">
-  What Our Users Say <span role="img" aria-label="speech bubble">💬</span>
-</h2>
-<h4 className="text-lg font-normal mb-4 text-gray-600 text-center">
-  Real stories, real results! <span role="img" aria-label="muscle">💪</span> <span role="img" aria-label="fire">🔥</span> <br />
-  See how Trainer.ai is transforming fitness journeys around the world.
-</h4>
+            TESTIMONIALS <span role="img" aria-label="sparkles">✨</span>
+          </p>
 
-</div>
+
+          <h2 className="text-4xl font-black mb-4 text-center">
+            What Our Users Say <span role="img" aria-label="speech bubble">💬</span>
+          </h2>
+          <h4 className="text-lg font-normal mb-4 text-gray-600 text-center">
+            Real stories, real results! <span role="img" aria-label="muscle">💪</span> <span role="img" aria-label="fire">🔥</span> <br />
+            See how Trainer.ai is transforming fitness journeys around the world.
+          </h4>
+
+        </div>
 
         <AnimatedTestimonials
 
@@ -293,7 +289,7 @@ export default function UiftryLandingPage() {
               src: '/images/t3.png',
               name: 'Jordan Lee',
               designation: 'App User',
-              quote: 'Best fitness app I\'ve tried – beautiful, smart, and effective!'
+              quote: 'Best fitness app I&apos;ve tried – beautiful, smart, and effective!'
             }
           ]} />
 
@@ -371,99 +367,99 @@ export default function UiftryLandingPage() {
 }
 
 // Phone Mockup Component
-function PhoneMockup({ primary = false, darkMode = false }) {
-  return (
-    <div className={`w-48 h-96 rounded-3xl overflow-hidden border-4 border-gray-800 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'} ${primary ? 'z-20' : 'z-10 opacity-90 scale-90'} transition-all duration-300`}>
-      {/* Notch */}
-      <div className="w-1/2 h-6 bg-gray-800 rounded-b-xl mx-auto" />
+// function PhoneMockup({ primary = false, darkMode = false }) {
+//   return (
+//     <div className={`w-48 h-96 rounded-3xl overflow-hidden border-4 border-gray-800 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'} ${primary ? 'z-20' : 'z-10 opacity-90 scale-90'} transition-all duration-300`}>
+//       {/* Notch */}
+//       <div className="w-1/2 h-6 bg-gray-800 rounded-b-xl mx-auto" />
 
-      {/* App Screen */}
-      <div className="p-4 h-full">
-        <div className="flex justify-between items-center mb-4">
-          <div>
-            <p className={`text-sm ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>Hello <span className="font-bold">Sami</span></p>
-          </div>
-          <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
-        </div>
+//       {/* App Screen */}
+//       <div className="p-4 h-full">
+//         <div className="flex justify-between items-center mb-4">
+//           <div>
+//             <p className={`text-sm ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>Hello <span className="font-bold">Sami</span></p>
+//           </div>
+//           <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
+//         </div>
 
-        {/* Card */}
-        <div className="bg-black text-white p-4 rounded-xl mb-4 transition-transform duration-300 hover:scale-105">
-          <div className="flex justify-between items-center mb-2">
-            <div className="text-xs">uiftry</div>
-            <div className="text-xs">VISA</div>
-          </div>
-          <div className="text-xs text-gray-400 mb-4">
-            0000 8888 2222 3333
-          </div>
-          <div className="text-xs text-gray-400">
-            <span>12/24</span>
-          </div>
-        </div>
+//         {/* Card */}
+//         <div className="bg-black text-white p-4 rounded-xl mb-4 transition-transform duration-300 hover:scale-105">
+//           <div className="flex justify-between items-center mb-2">
+//             <div className="text-xs">uiftry</div>
+//             <div className="text-xs">VISA</div>
+//           </div>
+//           <div className="text-xs text-gray-400 mb-4">
+//             0000 8888 2222 3333
+//           </div>
+//           <div className="text-xs text-gray-400">
+//             <span>12/24</span>
+//           </div>
+//         </div>
 
-        {/* Balance */}
-        <div className="flex justify-between mb-4">
-          <div className="text-center">
-            <div className={`flex items-center text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-              <svg className="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="none">
-                <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" strokeWidth="2" />
-              </svg>
-              <span>Income</span>
-            </div>
-            <p className="font-bold">$4,264</p>
-          </div>
+//         {/* Balance */}
+//         <div className="flex justify-between mb-4">
+//           <div className="text-center">
+//             <div className={`flex items-center text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+//               <svg className="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="none">
+//                 <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" strokeWidth="2" />
+//               </svg>
+//               <span>Income</span>
+//             </div>
+//             <p className="font-bold">$4,264</p>
+//           </div>
 
-          <div className="text-center">
-            <div className={`flex items-center text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-              <svg className="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="none">
-                <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" strokeWidth="2" />
-              </svg>
-              <span>Expenses</span>
-            </div>
-            <p className="font-bold">$3,897</p>
-          </div>
-        </div>
+//           <div className="text-center">
+//             <div className={`flex items-center text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+//               <svg className="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="none">
+//                 <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" strokeWidth="2" />
+//               </svg>
+//               <span>Expenses</span>
+//             </div>
+//             <p className="font-bold">$3,897</p>
+//           </div>
+//         </div>
 
-        {/* Transaction */}
-        <div className={`${darkMode ? 'bg-red-900/30' : 'bg-red-50'} p-3 rounded-xl mb-8 transition-all duration-300 hover:shadow-md cursor-pointer`}>
-          <div className="flex items-center">
-            <div className="w-8 h-8 bg-green-500 rounded-lg mr-2"></div>
-            <div className="flex-1">
-              <p className="text-sm font-bold">$560.00</p>
-              <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>From Adam</p>
-            </div>
-            <div>
-              <span className="text-xs text-red-500">On Hold</span>
-            </div>
-          </div>
-        </div>
+//         {/* Transaction */}
+//         <div className={`${darkMode ? 'bg-red-900/30' : 'bg-red-50'} p-3 rounded-xl mb-8 transition-all duration-300 hover:shadow-md cursor-pointer`}>
+//           <div className="flex items-center">
+//             <div className="w-8 h-8 bg-green-500 rounded-lg mr-2"></div>
+//             <div className="flex-1">
+//               <p className="text-sm font-bold">$560.00</p>
+//               <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>From Adam</p>
+//             </div>
+//             <div>
+//               <span className="text-xs text-red-500">On Hold</span>
+//             </div>
+//           </div>
+//         </div>
 
-        {/* Navigation */}
-        <div className={`absolute bottom-4 left-0 right-0 ${darkMode ? 'bg-gray-700' : 'bg-white'} p-2 rounded-xl mx-4 transition-all duration-300`}>
-          <div className="flex justify-around">
-            <button className="p-2 text-orange-500 transition-transform duration-200 hover:scale-125">
-              <Home size={20} />
-            </button>
-            <button className={`p-2 ${darkMode ? 'text-gray-300' : 'text-gray-400'} transition-colors duration-200 hover:text-orange-500`}>
-              <PieChart size={20} />
-            </button>
-            <button className="p-2 bg-gray-900 text-white rounded-lg transition-transform duration-200 hover:scale-110">
-              <CreditCard size={20} />
-            </button>
-            <button className={`p-2 ${darkMode ? 'text-gray-300' : 'text-gray-400'} transition-colors duration-200 hover:text-orange-500`}>
-              <Settings size={20} />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+//         {/* Navigation */}
+//         <div className={`absolute bottom-4 left-0 right-0 ${darkMode ? 'bg-gray-700' : 'bg-white'} p-2 rounded-xl mx-4 transition-all duration-300`}>
+//           <div className="flex justify-around">
+//             <button className="p-2 text-orange-500 transition-transform duration-200 hover:scale-125">
+//               <Home size={20} />
+//             </button>
+//             <button className={`p-2 ${darkMode ? 'text-gray-300' : 'text-gray-400'} transition-colors duration-200 hover:text-orange-500`}>
+//               <PieChart size={20} />
+//             </button>
+//             <button className="p-2 bg-gray-900 text-white rounded-lg transition-transform duration-200 hover:scale-110">
+//               <CreditCard size={20} />
+//             </button>
+//             <button className={`p-2 ${darkMode ? 'text-gray-300' : 'text-gray-400'} transition-colors duration-200 hover:text-orange-500`}>
+//               <Settings size={20} />
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 // Phone Mockup Component
 function PhoneMockupImageWithNav({ primary = false, darkMode = false, screen = 'p1' }) {
   return (
     <div className={`w-48 h-96 rounded-3xl overflow-hidden border-0 border-gray-800  ${primary ? 'z-20' : 'z-10 opacity-90 scale-90'} transition-all duration-300`}>
 
-      <PhoneMockupImage primary darkMode={darkMode} screen={screen} width={180} height={200} />
+      <PhoneMockupImage  screen={screen} width={180} height={200} />
 
       {/* Navigation */}
       <div className={`absolute bottom-4 left-0 right-0 ${darkMode ? 'bg-gray-700' : 'bg-white'} p-2 rounded-xl mx-4 transition-all duration-300`}>
@@ -488,9 +484,18 @@ function PhoneMockupImageWithNav({ primary = false, darkMode = false, screen = '
   );
 }
 // Phone Mockup Component image
-function PhoneMockupImage({ primary = false, darkMode = false, screen = 'p1', width = 160, height = 200 }) {
+function PhoneMockupImage({
+  //  primary = false,
+  //  darkMode = false, 
+   screen = 'p1', width = 160, height = 200, }) {
   return (
-    <img src={`/images/${screen}.png`} alt="Phone" width={width} height={height} />
+    <Image
+      src={`/images/${screen}.png`}
+      alt="Phone"
+      width={width}
+      height={height}
+      className="object-contain"
+    />
   );
 }
 

@@ -59,7 +59,7 @@ export default function DownloadPage() {
                     <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Your AI-Powered Fitness Companion</p>
                   </div>
                 </div>
-                <p className={`mb-6 text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Experience the future of fitness with Trainer.ai – the smart, adaptive app that helps you crush your goals with personalized workouts, real-time feedback, and a beautiful, modern interface. Whether you're a beginner or a pro, Trainer.ai is your partner for a healthier, stronger you.</p>
+                <p className={`mb-6 text-base ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Experience the future of fitness with Trainer.ai – the smart, adaptive app that helps you crush your goals with personalized workouts, real-time feedback, and a beautiful, modern interface. Whether you&apos;re a beginner or a pro, Trainer.ai is your partner for a healthier, stronger you.</p>
                 <div className="space-y-4 mt-auto">
                   <Button asChild className={`w-full bg-[#FE5126] hover:bg-[#FE5126]/90  transform hover:scale-105 transition-all duration-300 text-base font-semibold py-3 rounded-lg text-white`}>
                     <a href="/downloads/trainer-app.apk" download>
@@ -166,7 +166,7 @@ export default function DownloadPage() {
                 title: "Seamless Experience",
                 description: "Enjoy a beautiful, fast, and intuitive app on any device. Trainer.ai is designed for a delightful experience, day or night."
               }
-            ].map((feature, index) => (
+            ].map((feature) => (
               <motion.div
                 key={feature.title}
                 whileHover={{ 
