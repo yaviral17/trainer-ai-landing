@@ -30,32 +30,7 @@ export default function Header({
             </div>
             </Link>
         
-        <nav className="hidden md:flex space-x-8">
-          {/* <Link 
-            href="/"
-            className={`font-medium ${pathname === '/' ? 'text-[#FE5126]' : darkMode ? 'text-gray-300' : 'text-gray-700'} transition-colors duration-200 hover:text-[#FE5126]`}
-          >
-            Home
-          </Link>
-          <Link 
-            href="/about"
-            className={`font-medium ${pathname === '/about' ? 'text-[#FE5126]' : darkMode ? 'text-gray-300' : 'text-gray-700'} transition-colors duration-200 hover:text-[#FE5126]`}
-          >
-            About Us
-          </Link>
-          <Link 
-            href="/pricing"
-            className={`font-medium ${pathname === '/pricing' ? 'text-[#FE5126]' : darkMode ? 'text-gray-300' : 'text-gray-700'} transition-colors duration-200 hover:text-[#FE5126]`}
-          >
-            Pricing
-          </Link>
-          <Link 
-            href="/features"
-            className={`font-medium ${pathname === '/features' ? 'text-[#FE5126]' : darkMode ? 'text-gray-300' : 'text-gray-700'} transition-colors duration-200 hover:text-[#FE5126]`}
-          >
-            Features
-          </Link> */}
-        </nav>
+      
         
         <div className="flex items-center space-x-4">
           <button 

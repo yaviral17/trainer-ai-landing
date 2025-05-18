@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen font-sans">
         <ThemeProvider>
-          <Header activeTab="" onTabChange={() => {}} />
+          <Header activeTab="" onTabChange={() => {}}  />
           {children}
         </ThemeProvider>
          <Analytics />

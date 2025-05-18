@@ -30,12 +30,16 @@ function Footerdemo() {
   
 
   return (
-    <footer className={`relative border-t ${darkMode?"bg-black/24":"bg-gray-900/6"} text-foreground transition-colors duration-300`}>
+    <footer className={`w-[100%] relative border-t ${darkMode?"bg-black/24":"bg-gray-900/6"} text-foreground transition-colors duration-300`}>
       <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col items-start gap-4">
             <div className="flex items-center gap-3">
-              <Image src="/images/logo_icon.png" alt="Trainer.ai Logo" className="w-10 h-10 rounded-lg" />
+              <Image src="/images/logo_icon.png" alt="Trainer.ai Logo" className="w-10 h-10 rounded-lg"  
+              width={40}
+              height={40}
+              
+              />
               <span className={`text-2xl font-bold tracking-tight ${darkMode? "text-white/90":"text-gray-700"} `}>trainer.ai</span>
             </div>
             <p className="text-muted-foreground max-w-xs">

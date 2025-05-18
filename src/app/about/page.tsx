@@ -79,7 +79,9 @@ export default function AboutPage() {
                 <Image 
                   src="/images/t1.png" 
                   alt="Team Member" 
-                  className="w-full h-full object-cover"
+                
+                  width={128}
+                  height={128}
                 />
               </div>
               <h3 className="text-xl font-bold mb-2">John Doe</h3>
@@ -91,6 +93,8 @@ export default function AboutPage() {
                   src="/images/t2.png" 
                   alt="Team Member" 
                   className="w-full h-full object-cover"
+                  width={128}
+                  height={128}
                 />
               </div>
               <h3 className="text-xl font-bold mb-2">Jane Smith</h3>
@@ -102,6 +106,8 @@ export default function AboutPage() {
                   src="/images/t3.png" 
                   alt="Team Member" 
                   className="w-full h-full object-cover"
+                  width={128}
+                  height={128}
                 />
               </div>
               <h3 className="text-xl font-bold mb-2">Mike Johnson</h3>
