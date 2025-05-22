@@ -12,15 +12,30 @@ export default function UiftryLandingPage() {
   const [hoveredFeature, setHoveredFeature] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isMobile, setIsMobile] = useState(false); // Add state for mobile detection
 
-  // Handle scroll animations
+  // Handle scroll animations and mobile detection
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
     };
 
+    const handleResize = () => {
+      // Consider screens smaller than md breakpoint (768px) as mobile
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial checks
+    handleScroll();
+    handleResize();
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
 
@@ -32,14 +47,15 @@ export default function UiftryLandingPage() {
 
   return (
     <div className={`min-h-screen font-sans transition-colors duration-300 ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
-      {/* Hero Section */}
-      <section className="relative px-6 py-12 md:py-24 max-w-6xl mx-auto">
+      {/* Hero Section - Added min-h for mobile */}
+      <section className="relative px-6 py-12 pb-32 min-h-[600px] md:min-h-0 md:py-24 max-w-6xl mx-auto"> {/* Added min-h-[600px] for mobile */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div
             className="transform transition-all duration-500"
             style={{
               opacity: scrollPosition < 100 ? 1 : 0.8,
-              transform: `translateY(${scrollPosition * 0.05}px)`
+              // Apply translateY only if not mobile
+              transform: isMobile ? 'none' : `translateY(${scrollPosition * 0.05}px)`
             }}
           >
             <h1 className="text-4xl md:text-6xl font-black mb-4 leading-tight text-left">
@@ -71,7 +87,8 @@ export default function UiftryLandingPage() {
           <div
             className="relative transform transition-all duration-700"
             style={{
-              transform: `translateY(${-scrollPosition * 0.03}px) rotate(${scrollPosition * 0.01}deg)`,
+              // Apply translateY and rotate only if not mobile
+              transform: isMobile ? 'none' : `translateY(${-scrollPosition * 0.03}px) rotate(${scrollPosition * 0.01}deg)`,
             }}
           >
             <div className="relative z-10 flex justify-center">
@@ -92,26 +109,8 @@ export default function UiftryLandingPage() {
             <div className="absolute top-0 right-0 text-gray-200 animate-pulse">
               <Star size={24} />
             </div>
-            <div className="absolute bottom-0 left-1/4 text-gray-200 animate-pulse" style={{ animationDelay: '1s' }}>
-              <Star size={24} />
-            </div>
           </div>
         </div>
-
-        {/* Achievement badge
-        <div className="mt-12 md:mt-0 md:absolute -bottom-12 left-8">
-          <div 
-            className={`${darkMode ? 'bg-gray-800' : 'bg-black'} text-white p-4 rounded-lg flex items-center space-x-4 max-w-xs transform rotate-3 hover:rotate-6 transition-transform duration-300 cursor-pointer`}
-          >
-            <div className="bg-orange-500 rounded-full p-2">
-              <Star size={20} className="animate-spin" style={{ animationDuration: '10s' }} />
-            </div>
-            <div>
-              <p className="text-xs text-gray-400">Achievement</p>
-              <p className="font-medium">Best App On Play Store</p>
-            </div>
-          </div>
-        </div> */}
       </section>
 
       {/* Feature Badge */}
@@ -142,13 +141,14 @@ export default function UiftryLandingPage() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="px-6 py-12 md:py-24 max-w-6xl mx-auto">
+      {/* Features Section - Added min-h for mobile and Increased pb-32 */}
+      <section className="px-6 py-12 pb-32 min-h-[600px] md:min-h-0 md:py-24 max-w-6xl mx-auto"> {/* Added min-h-[600px] for mobile */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div
             className="relative flex justify-center"
             style={{
-              transform: `translateY(${scrollPosition > 300 ? (scrollPosition - 300) * 0.05 : 0}px)`,
+              // Apply translateY only if not mobile
+              transform: isMobile ? 'none' : `translateY(${scrollPosition > 300 ? (scrollPosition - 300) * 0.05 : 0}px)`,
               opacity: scrollPosition > 300 ? 1 : 0.7,
               transition: 'transform 0.5s, opacity 0.5s'
             }}
@@ -193,8 +193,8 @@ export default function UiftryLandingPage() {
           </div>
         </div>
       </section>
-      {/* Advantages Section */}
-      <section className="px-6 py-12 md:py-24 max-w-6xl mx-auto">
+      {/* Advantages Section - Added min-h for mobile and Increased pb-32 */}
+      <section className="px-6 py-12 pb-32 min-h-[600px] md:min-h-0 md:py-24 max-w-6xl mx-auto"> {/* Added min-h-[600px] for mobile */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <p className="text-orange-500 font-medium mb-2">ADVANTAGES <span role="img" aria-label="trophy">🏆</span></p>
@@ -236,7 +236,8 @@ export default function UiftryLandingPage() {
           <div
             className="relative flex justify-center"
             style={{
-              transform: `translateY(${scrollPosition > 300 ? (scrollPosition - 300) * 0.05 : 0}px)`,
+              // Apply translateY only if not mobile
+              transform: isMobile ? 'none' : `translateY(${scrollPosition > 300 ? (scrollPosition - 300) * 0.05 : 0}px)`,
               opacity: scrollPosition > 300 ? 1 : 0.7,
               transition: 'transform 0.5s, opacity 0.5s'
             }}
@@ -361,7 +362,7 @@ export default function UiftryLandingPage() {
 
 
 
-      <Footerdemo  />
+      <Footerdemo />
     </div>
   );
 }
@@ -486,7 +487,7 @@ function PhoneMockupImageWithNav({ primary = false, darkMode = false, screen = '
 // Phone Mockup Component image
 function PhoneMockupImage({
   //  primary = false,
-  //  darkMode = false, 
+  //  darkMode = false,
    screen = 'p1', width = 160, height = 200, }) {
   return (
     <Image
