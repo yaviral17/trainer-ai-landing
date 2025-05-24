@@ -5,6 +5,7 @@ import { useTheme } from '@/context/ThemeContext';
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
 import { Footerdemo } from '@/components/ui/footer-section';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function UiftryLandingPage() {
   const { darkMode } = useTheme();
@@ -127,17 +128,20 @@ export default function UiftryLandingPage() {
               <p className={`font-medium ${darkMode ? "text-gray-400" : "text-gray-900"}`}>Your Personal Trainer, Upgraded</p>
             </div>
           </div>
-
+          <Link href="/download">
           <div
             className="bg-gradient-to-r from-orange-600 to-orange-500 px-4 py-3 rounded-lg cursor-pointer transform transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/50"
-            onClick={() => setShowModal(true)}
+         
           >
+          
             <span className="flex items-center">
               <Star className="mr-2" size={14} />
               <span>Download TrainerAI </span>
             </span>
             <span className="text-xs text-white/80">It&apos;s Free</span>
+           
           </div>
+          </Link>
         </div>
       </section>
 
