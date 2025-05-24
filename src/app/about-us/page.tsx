@@ -17,7 +17,7 @@ export default function AboutUsPage() {
               and Maria Sanchez, a visionary educator. Their shared dream was to
               create a digital haven of knowledge accessible to all. United by their
               belief in the transformational power of education, they embarked on a
-              journey to build 'Kawruh.' With relentless dedication, they gathered a
+              journey to build &apos;Kawruh.&apos; With relentless dedication, they gathered a
               team of experts and launched this innovative platform, creating a global
               community of eager learners, all connected by the desire to explore,
               learn, and grow
