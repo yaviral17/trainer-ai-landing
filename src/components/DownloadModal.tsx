@@ -14,7 +14,7 @@ export default function DownloadModal() {
         style={{ animation: 'fadeIn 0.3s, scaleIn 0.3s' }}
       >
         <div className="flex justify-between items-center mb-4">
-          <h3 className={`text-xl font-bold ${darkMode? "text-white":"text-gray-700"}`}>Download Uiftry</h3>
+          <h3 className={`text-xl font-bold ${darkMode? "text-white":"text-gray-700"}`}>Download TrainerAI</h3>
           <button 
             onClick={() => setShowModal(false)}
             className={`px-[20px] py-[10px] rounded-full ${darkMode? "text-white":"text-gray-700"} ${darkMode? "hover:bg-gray-600":"hover:bg-gray-200"} dark:hover:bg-gray-700`}
@@ -24,7 +24,7 @@ export default function DownloadModal() {
         </div>
         
         <p className={`mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-          Choose your platform to download the Uiftry app:
+          Choose your platform to download the TrainerAI app:
         </p>
         
         <div className="grid grid-cols-2 gap-4 mb-6">

@@ -7,7 +7,7 @@ import { Footerdemo } from '@/components/ui/footer-section';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function UiftryLandingPage() {
+export default function TrainerAILandingPage() {
   const { darkMode } = useTheme();
   const [videoPlaying, setVideoPlaying] = useState(false);
   const [hoveredFeature, setHoveredFeature] = useState<string | null>(null);
@@ -47,12 +47,12 @@ export default function UiftryLandingPage() {
   };
 
   return (
-    <div className={`min-h-screen font-sans transition-colors duration-300 ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
+    <div className={`min-h-svcreen font-sans transition-colors duration-300 ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
       {/* Hero Section - Added min-h for mobile */}
       <section className="relative px-6 py-12 pb-32 min-h-[600px] md:min-h-0 md:py-24 max-w-6xl mx-auto"> {/* Added min-h-[600px] for mobile */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div
-            className="transform transition-all duration-500"
+            className="transform transition-all duration-500 items-left"
             style={{
               opacity: scrollPosition < 100 ? 1 : 0.8,
               // Apply translateY only if not mobile
@@ -63,17 +63,17 @@ export default function UiftryLandingPage() {
               Unleash Your Potential <span role="img" aria-label="rocket">🚀</span><br />
               with <span className="text-orange-500">AI-Powered Fitness</span>
             </h1>
-            <p className={`mb-8 max-w-lg mx-auto text-left ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+            <p className={`min-w-[40%] mx-auto text-left ${darkMode ? 'text-gray-300' : 'text-gray-600'} items-left`}>
               Meet <span className="font-bold text-orange-500">TrainerAI</span> – your smart, adaptive fitness companion. <br />
               Get <span className="font-semibold">personalized workouts</span>, <span className="font-semibold">real-time feedback</span>, and a stunning, modern experience on any device. <span role="img" aria-label="muscle">💪</span>
             </p>
             <div className="flex flex-wrap gap-4">
-              <button
+              {/* <button
                 className="bg-[#FE5126] text-white px-6 py-3 rounded-md font-medium flex items-center hover:bg-orange-500 transition-colors duration-200 transform hover:scale-105 active:scale-95"
               >
                 Start Your Journey <ChevronRight className="ml-2 animate-pulse" size={18} />
-              </button>
-              <button
+              </button> */}
+              {/* <button
                 className={`flex items-center font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'} hover:text-orange-500 transition-colors duration-200`}
                 onClick={() => setVideoPlaying(!videoPlaying)}
               >
@@ -81,7 +81,7 @@ export default function UiftryLandingPage() {
                   <Play size={16} />
                 </div>
                 {videoPlaying ? 'Pause Video' : 'Watch Demo'}
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -312,7 +312,7 @@ export default function UiftryLandingPage() {
             style={{ animation: 'fadeIn 0.3s, scaleIn 0.3s' }}
           >
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-bold">Download Uiftry</h3>
+              <h3 className="text-xl font-bold">Download TrainerAI</h3>
               <button
                 onClick={closeModal}
                 className="p-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
@@ -322,7 +322,7 @@ export default function UiftryLandingPage() {
             </div>
 
             <p className={`mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              Choose your platform to download the Uiftry app:
+              Choose your platform to download the TrainerAI app:
             </p>
 
             <div className="grid grid-cols-2 gap-4 mb-6">
@@ -390,7 +390,7 @@ export default function UiftryLandingPage() {
 //         {/* Card */}
 //         <div className="bg-black text-white p-4 rounded-xl mb-4 transition-transform duration-300 hover:scale-105">
 //           <div className="flex justify-between items-center mb-2">
-//             <div className="text-xs">uiftry</div>
+//             <div className="text-xs">TrainerAI</div>
 //             <div className="text-xs">VISA</div>
 //           </div>
 //           <div className="text-xs text-gray-400 mb-4">
