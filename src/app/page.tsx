@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Play, Star, Home, PieChart, Settings, CreditCard } from 'lucide-react';
+import { Star, Home, PieChart, Settings, CreditCard } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
 import { Footerdemo } from '@/components/ui/footer-section';
@@ -9,7 +9,6 @@ import Link from 'next/link';
 
 export default function TrainerAILandingPage() {
   const { darkMode } = useTheme();
-  const [videoPlaying, setVideoPlaying] = useState(false);
   const [hoveredFeature, setHoveredFeature] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);

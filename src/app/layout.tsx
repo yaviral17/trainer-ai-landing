@@ -5,7 +5,7 @@ import { ThemeProvider } from '@/context/ThemeContext';
 import './globals.css';
 
 import { Analytics } from '@vercel/analytics/next';
-import { Link } from 'lucide-react';
+
 
 export default function RootLayout({
   children,
